@@ -18,7 +18,7 @@ class DatabaseConfig{
 
   Future cretaTable(Database db) async{
     await db.execute(
-      'CREATE TABLE IF NOT EXISIS information(id INTEGER PRIMARY KEY, information TEXT NOT NULL);');
+      'CREATE TABLE IF NOT EXISTS information(id INTEGER PRIMARY KEY, information TEXT NOT NULL);');
   }
 
 }

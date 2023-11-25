@@ -11,6 +11,16 @@ class Information {
     };
   }
 
+  Map<String, dynamic> toMapExceptId() {
+    return {
+      'information': information,
+    };
+  }
+
+  factory Information.fromMap(Map<String, dynamic> map) {
+    return Information(map['id'], map['information']);
+  }
+
   @override
   String toString() {
     return 'Information{id: $id, information: $information}';

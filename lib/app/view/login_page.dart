@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 prefixIcon: Icons.lock,
               ),
               SizedBox(height: 24),
-              TestButton(
+              TargetButton(
                 onPressed: () {
                   _validateAndNavigate();
                 },

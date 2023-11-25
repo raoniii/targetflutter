@@ -38,11 +38,15 @@ dependencies:
   url_launcher: ^6.1.5
   shared_preferences: ^2.0.8
   build_runner: ^2.0.5
-  mobx_codegen: ^2.0.1
-  mobx: ^2.2.1
+  flutter_mobx: ^2.0.0
+  mobx: any
+  mobx_codegen: any
+  provider: any
   sqflite: ^2.0.0
 
 dev_dependencies:
+  build_runner: ^2.1.4
+  mobx_codegen: any
   flutter_test:
     sdk: flutter
 

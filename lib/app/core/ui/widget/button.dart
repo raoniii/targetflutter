@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
-class TestButton extends StatelessWidget {
+class TargetButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final String label;
   final double? width;
   final double? height;
+  final Color? backgroundColor;
+  final Color? textColor; // Adicione essa linha
 
-  const TestButton({
+  const TargetButton({
     Key? key,
     this.onPressed,
     required this.label,
     this.width,
     this.height = 50,
+    this.backgroundColor,
+    this.textColor, // Adicione essa linha
   }) : super(key: key);
 
   @override
@@ -22,18 +26,17 @@ class TestButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white60,
-          backgroundColor: Color(0xFF43bd6e),
+          foregroundColor: textColor,
+          backgroundColor: backgroundColor ?? Color(0xFF43bd6e),
           elevation: 3,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-                20.0), // Aumentei o raio para tornar mais arredondado
+            borderRadius: BorderRadius.circular(20.0),
           ),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         ),
         child: Text(
           label,
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, color: textColor),
         ),
       ),
     );
