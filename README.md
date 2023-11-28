@@ -15,18 +15,30 @@ Antes de começar, certifique-se de ter o ambiente de desenvolvimento Flutter co
 A estrutura do projeto segue as melhores práticas do Flutter:
 
 lib/
-|- screens/
-| |- home_screen.dart
-| |- login_screen.dart
+|- core/
+| |- ui/
+| | |- theme/
+| | | | themeconfig.dart
+| | |- widget/
+| | | | button.dart
+| | | | information_builders.dart
+| | | | policyprivacy.dart
+| | | | text_field.dart
+|- page/
+| |- home_page.dart
+| |- login_page.dart
 |- models/
 | |- information_model.dart
-|- controllers/
-| |- information_controller.dart
+|- controller.page/
+| |- information_store.dart
+| |- information_store.g.dart
 |- database/
+| |- controller/
+| | | information_controller.dart
 | |- database_config.dart
 
-
-- `screens/`: Contém as telas do aplicativo.
+- `core/`: configuração de tema e widgets padrão.
+- `page/`: Contém as telas do aplicativo.
 - `models/`: Armazena os modelos de dados do aplicativo.
 - `controllers/`: Contém os controladores para manipular lógica de negócios.
 - `database/`: Armazena configurações e classes relacionadas ao banco de dados.

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PolicyPrivacy extends StatelessWidget {
-  final String policyUrl;
 
-  PolicyPrivacy(this.policyUrl);
+  String policyUrl;
+
+
+  PolicyPrivacy({this.policyUrl = 'https://www.google.com.br'});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +20,7 @@ class PolicyPrivacy extends StatelessWidget {
           color: Colors.white60,
           decoration: TextDecoration.underline,
         ),
+        textAlign: TextAlign.center,
       ),
     );
   }

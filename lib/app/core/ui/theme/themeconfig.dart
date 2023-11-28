@@ -4,13 +4,16 @@ class ThemeConfig {
   static ThemeData getLoginTheme() {
     return ThemeData(
       scaffoldBackgroundColor: Colors.transparent,
-      primaryColor: Color(0xFF1f4e61),
-      hintColor: Color(0xFF2e968f),
+      primaryColor: AppColors.primaryColor,
+      hintColor: AppColors.hintColor,
       textSelectionTheme: TextSelectionThemeData(
-        cursorColor: Colors.black, // Cor do cursor
+        cursorColor: Colors.black,
       ),
     );
   }
+
+
+
 
   static BoxDecoration getGradientBackground() {
     return BoxDecoration(
@@ -18,10 +21,16 @@ class ThemeConfig {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          Color(0xFF1f4e61),
-          Color(0xFF2e968f),
+          AppColors.primaryColor,
+          AppColors.secondaryColor,
         ],
       ),
     );
   }
+}
+
+class AppColors {
+  static const Color primaryColor = Color(0xFF1f4e61);
+  static const Color hintColor = Color(0xFF2e968f);
+  static const Color secondaryColor = Color(0xFF2e968f);
 }

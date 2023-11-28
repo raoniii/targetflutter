@@ -13,6 +13,10 @@ class TargetTextField extends StatelessWidget {
   IconData? prefixIcon;
   TextStyle? hintTextStyle;
   Function(String)? onFieldSubmitted;
+  Color? iconColor;
+  double? width;
+  double? height;
+  EdgeInsetsGeometry? contentPadding; // Novo parâmetro para contentPadding
 
   TargetTextField(
       this.label,
@@ -27,6 +31,10 @@ class TargetTextField extends StatelessWidget {
         this.prefixIcon,
         this.hintTextStyle,
         this.onFieldSubmitted,
+        this.iconColor,
+        this.width,
+        this.height,
+        this.contentPadding,
       });
 
   @override
@@ -69,8 +77,9 @@ class TargetTextField extends StatelessWidget {
           color: Colors.grey,
         ),
         hintText: hint,
-        hintStyle: hintTextStyle ?? TextStyle(fontSize: 16), // Usar o estilo fornecido ou o padrão
-        prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
+        hintStyle: hintTextStyle ?? TextStyle(fontSize: 16),
+        prefixIcon: prefixIcon != null ? Icon(prefixIcon, color: iconColor) : null,
+        contentPadding: contentPadding ?? EdgeInsets.symmetric(horizontal: width ?? 0, vertical: height ?? 0),
       ),
     );
   }
